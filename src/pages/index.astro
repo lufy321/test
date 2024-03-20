@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostItem from "../components/PostItem.astro";
+import GlobalStyles from "../components/GlobalStyles.astro";
+import Nav from "../components/Nav.astro";
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<GlobalStyles />
+<BaseLayout>
+	<main>
+		<section class="bannerBox">
+			<div class="imgBox">
+				<img src="/20240214.webp" alt="" />
+			</div>
+			<a class="textBox" href="#">
+				<h3>人类绿洲</h3>
+				<p>For shame and pride.</p>
+			</a>
+		</section>
+		<style>
+			main {
+				width: 64rem;
+				margin: 0 auto;
+			}
+
+			main .bannerBox {
+				padding: 3rem 4rem;
+				position: relative;
+			}
+
+			main .bannerBox .imgBox {
+				cursor: pointer;
+			}
+
+			main .bannerBox .imgBox img {
+				width: 100%;
+				object-fit: cover;
+				object-position: bottom;
+				height: 20rem;
+			}
+
+			main .bannerBox .textBox {
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				height: 120px;
+				background-color: rgb(62, 136, 108);
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				z-index: 999;
+			}
+		</style>
+		<section class="content">
+			<div class="contentLeft">
+				<div class="redPost">
+					<h1>Profitez de votre vie.</h1>
+					<p>
+						去年的年终总结洋洋洒洒写了一万字，竟然漏掉了我在去年做出的一项重要决定。大概是因为坚持到现在，已经成为习惯了，所以不觉得很重要吧。这件事情确实说大不小的，但讲给其他人听的时候，对方还是会感到惊讶或是赞许——我在高考后的暑假开启了法语学习。Oui,vousavezbienentendu.我一直都想学一......
+					</p>
+				</div>
+
+				<div class="redPostData">
+					<div class="pubDate">2024-03-20</div>
+					<div class="tag">无心文字</div>
+				</div>
+			</div>
+			<div class="sidebar">
+				<h4>Previous Posts</h4>
+				<ul>
+					<li>Manjaro 桌面折腾记</li>
+					<li>我的思绪像河流</li>
+					<li>剔除每一寸多余的杂质</li>
+				</ul>
+				<a>查看更多</a>
+			</div>
+		</section>
+
+		<style>
+			.content {
+				display: flex;
+				justify-content: space-between;
+			}
+			.content .contentLeft {
+				flex: 0 0 70%;
+			}
+			.content .contentLeft .redPost p {
+				margin: 1.25rem 0;
+			}
+			.content .contentLeft .redPostData {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.content .sidebar {
+				margin: 2.5rem 0;
+			}
+
+			.content .sidebar ul li{
+				display: flex;
+				align-items: center;
+				list-style: none;
+				padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+			}
+
+			.content .sidebar ul li::before{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				background-color: #000;
+				margin-right: 5px;
+			}
+		</style>
+	</main></BaseLayout
+>

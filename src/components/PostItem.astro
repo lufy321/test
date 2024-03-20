@@ -1,0 +1,65 @@
+---
+const {title, des, dz, sc, xgrq, imgSrc, url} = Astro.props;
+---
+
+<a class="postItem" href=`${url}`>
+    <div class="imgBox"><img src=`${imgSrc}` alt="" /></div>
+    <div class="info">
+        <div class="text">
+            <p class="title">{title}</p>
+            <p class="des">{des}</p>
+        </div>
+        <div class="zcx">
+            <div class="dzs">
+                <img src="/点赞.svg" alt="" /><span>{dz}</span>
+            </div>
+            <div class="scs">
+                <img src="/收藏.svg" alt="" /><span>{sc}</span>
+            </div>
+            <div class="xgrq">{xgrq}</div>
+        </div>
+    </div>
+</a>
+<style>
+    .postItem {
+        box-shadow: 0 0 32px 23px rgba(0, 0, 0, 0.01);
+        display: flex;
+        width: 600px;
+    }
+    .postItem .imgBox {
+        position: relative;
+        width: 250px;
+        height: 250px;
+    }
+
+    .postItem .imgBox img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .postItem .info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px;
+        flex: 1;
+    }
+
+    .postItem .info .zcx {
+        display: flex;
+    }
+
+    .postItem .info .zcx div {
+        margin-right: 20px;
+    }
+
+    .postItem .info .zcx img {
+        width: 18px;
+        height: 18px;
+    }
+</style>
