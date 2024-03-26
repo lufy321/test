@@ -4,6 +4,9 @@ import GlobalStyles from "../components/GlobalStyles.astro";
 import ContentLayout from "../components/ContentLayout.astro";
 import Sidebar from "../components/Sidebar.astro";
 import BoxButton from "../components/BoxButton.astro";
+import Footer from "../layouts/Footer.astro";
+import Myzj from "../components/myzj.astro";
+import Zwjs from "../components/zwjs.astro";
 ---
 
 <GlobalStyles />
@@ -76,63 +79,10 @@ import BoxButton from "../components/BoxButton.astro";
         margin-bottom: 1.5rem;
       }
     </style>
-
-    <section>
-      <div class="myzj">
-        <h2 class="title font-bold">我的踪迹</h2>
-        <div class="myzj-right">
-          <ul>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a></li>
-            <li><a href=""><img src="" alt="" /><span>GitHub</span></a>q</li>
-          </ul>
-          <p class="qtzj">尝试在其他地方找到我</p>
-        </div>
-      </div>
-    </section>
+    <Myzj />
+    <Zwjs />
+    <Footer />
   </main>
-
-  <style>
-    .myzj {
-      display: flex;
-      padding: 3rem 0 0 3rem;
-      gap: 3rem;
-    }
-    .myzj .title {
-      writing-mode: vertical-lr;
-      border-right: 4px solid #e5e7eb;
-      padding-right: 1.25rem;
-      letter-spacing: 0.1rem;
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-    }
-
-    .myzj ul {
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      list-style: none;
-    }
-
-    .myzj ul li a {
-      padding: 0.5rem 1.25rem;
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-
-    .myzj .qtzj {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      margin: 1.5rem 0;
-    }
-  </style>
 
   <br />
   <br />
