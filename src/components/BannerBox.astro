@@ -1,0 +1,47 @@
+---
+import bannerImg from "@/assets/images/20240214.webp";
+import { Image } from "astro:assets";
+---
+
+<section class="bannerBox">
+  <div class="imgBox">
+    <Image src={bannerImg} alt="bannerImg" />
+  </div>
+  <a class="textBox" href="#">
+    <h3>人类绿洲</h3>
+    <p>For shame and pride.</p>
+  </a>
+</section>
+
+<style>
+  .bannerBox {
+    padding: 3rem 4rem;
+    position: relative;
+  }
+
+  .bannerBox .imgBox {
+    cursor: pointer;
+  }
+
+  .bannerBox .imgBox img {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    height: 20rem;
+  }
+
+  .bannerBox .textBox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 120px;
+    background-color: rgb(62, 136, 108);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+</style>

@@ -1,91 +1,29 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import GlobalStyles from "../components/GlobalStyles.astro";
-import ContentLayout from "../components/ContentLayout.astro";
-import Sidebar from "../components/Sidebar.astro";
-import BoxButton from "../components/BoxButton.astro";
-import Footer from "../layouts/Footer.astro";
-import Myzj from "../components/myzj.astro";
-import Zwjs from "../components/zwjs.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContentLayout from "@/components/ContentLayout.astro";
+import Sidebar from "@/components/Sidebar.astro";
+import BoxButton from "@/components/BoxButton.astro";
+import Footer from "@/layouts/Footer.astro";
+import Myzj from "@/components/myzj.astro";
+import Zwjs from "@/components/zwjs.astro";
+import BannerBox from "@/components/BannerBox.astro";
+import "@/assets/css/BaseStyle.css";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection('posts')
+console.log(posts)
+
 ---
 
-<GlobalStyles />
 <BaseLayout>
   <main>
-    <section class="bannerBox">
-      <div class="imgBox">
-        <img src="/20240214.webp" alt="" />
-      </div>
-      <a class="textBox" href="#">
-        <h3>人类绿洲</h3>
-        <p>For shame and pride.</p>
-      </a>
-    </section>
-    <style>
-      main {
-        width: 64rem;
-        margin: 0 auto;
-      }
-
-      main .bannerBox {
-        padding: 3rem 4rem;
-        position: relative;
-      }
-
-      main .bannerBox .imgBox {
-        cursor: pointer;
-      }
-
-      main .bannerBox .imgBox img {
-        width: 100%;
-        object-fit: cover;
-        object-position: bottom;
-        height: 20rem;
-      }
-
-      main .bannerBox .textBox {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        height: 120px;
-        background-color: rgb(62, 136, 108);
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 999;
-      }
-    </style>
-    <section class="content">
-      <ContentLayout />
-      <Sidebar />
-    </section>
-
-    <style>
-      .content {
-        display: flex;
-        justify-content: space-between;
-      }
-    </style>
-
-    <section class="boxbutton">
-      <BoxButton />
-    </section>
-    <style>
-      .boxbutton {
-        margin-top: 3rem;
-        margin-bottom: 1.5rem;
-      }
-    </style>
+    <BannerBox />
+    <ContentLayout>
+      <Sidebar slot="sidebar" />
+    </ContentLayout>
+    <BoxButton />
     <Myzj />
     <Zwjs />
     <Footer />
   </main>
-
-  <br />
-  <br />
-  <br />
-  <br />
 </BaseLayout>

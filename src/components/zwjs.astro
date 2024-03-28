@@ -1,32 +1,37 @@
+---
+import isla from "@/assets/images/isla.webp";
+import { Image } from "astro:assets";
+---
+
 <section class="zwjs">
-    <div class="imgBox">
-        <img src="/isla.webp" alt="" />
-    </div>
-    <div class="zwjstxt">
-        <p class="txtTop">Eltrac / Lychnus / 以歌 / 帆迹</p>
-        <p class="txtContent">
-            不尊重文字的独立博主，胡言乱语的小说家，兴趣使然的神秘学研究者，爱走弯路的半吊子程序员，不务正业的学生，品味小众的游戏爱好者，需要靠早晨一杯咖啡维持生命体征的废物。
-        </p>
-        <p class="txtBottom">太阳双子月升处女、生命灵数 9、INFP</p>
-    </div>
+  <div class="imgBox">
+    <Image src={isla} alt="isla" />
+  </div>
+  <div class="zwjstxt">
+    <p class="txtTop">Eltrac / Lychnus / 以歌 / 帆迹</p>
+    <p class="txtContent">
+      不尊重文字的独立博主，胡言乱语的小说家，兴趣使然的神秘学研究者，爱走弯路的半吊子程序员，不务正业的学生，品味小众的游戏爱好者，需要靠早晨一杯咖啡维持生命体征的废物。
+    </p>
+    <p class="txtBottom">太阳双子月升处女、生命灵数 9、INFP</p>
+  </div>
 </section>
 
 <style>
-    .zwjs {
-        display: flex;
-        padding: 1rem 2rem;
-        gap: 2.5rem;
-        align-items: center;
-    }
+  .zwjs {
+    display: flex;
+    padding: 1rem 2rem;
+    gap: 2.5rem;
+    align-items: center;
+  }
 
-    .zwjs .zwjstxt .txtTop {
-        color: rgb(113 113 122/1);
-    }
+  .zwjs .zwjstxt .txtTop {
+    color: rgb(113 113 122/1);
+  }
 
-    .zwjs .zwjstxt .txtContent {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-        font-weight: 600;
-        margin: 1.25rem 0;
-    }
+  .zwjs .zwjstxt .txtContent {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin: 1.25rem 0;
+  }
 </style>

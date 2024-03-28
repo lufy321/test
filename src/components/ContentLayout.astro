@@ -2,22 +2,29 @@
 
 ---
 
-<div class="contentLeft">
-  <div class="redPost">
-    <a href="">
-      <h1 class="font-bold">Profitez de votre vie.</h1>
-      <p>
-        去年的年终总结洋洋洒洒写了一万字，竟然漏掉了我在去年做出的一项重要决定。大概是因为坚持到现在，已经成为习惯了，所以不觉得很重要吧。这件事情确实说大不小的，但讲给其他人听的时候，对方还是会感到惊讶或是赞许——我在高考后的暑假开启了法语学习。Oui,vousavezbienentendu.我一直都想学一......
-      </p>
-    </a>
+<section class="content">
+  <div class="contentLeft">
+    <div class="redPost">
+      <a href="">
+        <h1 class="font-bold">Profitez de votre vie.</h1>
+        <p>
+          去年的年终总结洋洋洒洒写了一万字，竟然漏掉了我在去年做出的一项重要决定。大概是因为坚持到现在，已经成为习惯了，所以不觉得很重要吧。这件事情确实说大不小的，但讲给其他人听的时候，对方还是会感到惊讶或是赞许——我在高考后的暑假开启了法语学习。Oui,vousavezbienentendu.我一直都想学一......
+        </p>
+      </a>
+    </div>
+    <div class="redPostData">
+      <div class="pubDate"><a href="">2024-03-20</a></div>
+      <div class="tag"><a href="">无心文字</a></div>
+    </div>
   </div>
-  <div class="redPostData">
-    <div class="pubDate"><a href="">2024-03-20</a></div>
-    <div class="tag"><a href="">无心文字</a></div>
-  </div>
-</div>
+  <slot name="sidebar" />
+</section>
 
 <style>
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
   .contentLeft .redPost p {
     margin: 1.25rem 0;
   }
